@@ -1,0 +1,82 @@
+Beginning execution...
+
+Nodes values for graph "TSP Test Case":
+"A" "B" "C" "D" 
+
+A > B > D > C > A : 11
+optimal distance: 11
+***RESULTS ARE TO BE READ FROM RIGHT TO LEFT. ***
+***RIGHTMOST NODE IS THE SOURCE NODE. ***
+
+             C -> A             :...: 5 :...: predecessor: A             
+	A < C(source) 
+	**hops: 1
+
+             C -> B             :...: 4 :...: predecessor: D             
+	B < D < C(source) 
+	**hops: 2
+
+             C -> D             :...: 1 :...: predecessor: D             
+	D < C(source) 
+	**hops: 1
+
+**********************************************************
+
+Nodes values for graph "Transitive Closure Test Case":
+"null" "null" "null" "null" 
+
+Transitive Matrix (Warshall's):
+1 1 1 1 
+1 1 1 1 
+0 0 0 0 
+1 1 1 1 
+
+Nodes values for graph "Bellman Ford Test Case":
+"Nac" "Appl" "Lufk" "Garr" "Hou" 
+
+***RESULTS ARE TO BE READ FROM RIGHT TO LEFT. ***
+***RIGHTMOST NODE IS THE SOURCE NODE. ***
+
+          Appl -> Nac           :...: 4 :...: predecessor: Nac           
+	Nac < Appl(source) 
+	**hops: 1
+
+          Appl -> Lufk          :...: 8 :...: predecessor: Nac           
+	Lufk < Nac < Appl(source) 
+	**hops: 2
+
+          Appl -> Garr          :...: 10 :...: predecessor: Nac           
+	Garr < Nac < Appl(source) 
+	**hops: 2
+
+          Appl -> Hou           :...: 5 :...: predecessor: Hou           
+	Hou < Appl(source) 
+	**hops: 1
+
+**********************************************************
+Input - Adjacency Matrix: n = 5, name = "Bellman Ford Test Case"
+0 1 1 1 1 
+1 0 1 1 1 
+0 1 0 1 1 
+1 0 1 0 1 
+1 1 0 1 0 
+Transitive Matrix (Warshall's):
+1 1 1 1 1 
+1 1 1 1 1 
+1 1 1 1 1 
+1 1 1 1 1 
+1 1 1 1 1 
+
+Nodes values for graph "Bellman Ford Test Case":
+"Nac" "Appl" "Lufk" "Garr" "Hou" 
+
+Nac Appl Lufk Garr Hou 
+***********Displaying Matrix*************
+inf 4 4 10 4 
+4 inf 11 10 8 
+4 11 inf -1 1 
+10 10 -1 inf 14 
+4 8 1 14 inf 
+Graph "Bellman Ford Test Case" is an incomplete graph.
+Nac > Appl > Garr > Hou > Lufk > optimal distance: 33
+Program terminated
